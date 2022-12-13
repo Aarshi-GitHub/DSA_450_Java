@@ -4,7 +4,7 @@ link to Question : https://practice.geeksforgeeks.org/problems/kth-smallest-elem
 Input: arr[] = {7, 10, 4, 3, 20, 15}, K = 3 
 Output: 7
 
-Approach 1 : Sorting array and accessing the kth element in array.
+Approach 1 : Sorting array and accessing the (k-1)th element in array.
 Time Complexity : O(nlogn) sorting of array
 Space Complexity: O(1)
 
