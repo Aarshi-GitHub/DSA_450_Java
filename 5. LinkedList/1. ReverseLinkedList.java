@@ -76,7 +76,7 @@ class LinkedList{
         Scanner sc = new Scanner(System.in);
         LinkedList l1 = new LinkedList();
         int n = sc.nextInt();
-        for(int i=0;i<6;i++){
+        for(int i=0;i<n;i++){
             l1.insertAtTail(sc.nextInt());
         }
         l1.head = l1.reverseRec(l1.head);
