@@ -51,22 +51,27 @@ class BinaryTree{
         root = createTree();
     }
     
-    public void reverselevelOrderTraversal(Node root){
+    public void reverselevelOrderTraversal(){
+        ArrayList<Integer> arr = new ArrayList<>();
         if(root==null) return;
         Queue<Node> q = new LinkedList<>();
         q.add(root);
         while(!q.isEmpty()){
             Node temp = q.peek();
-            System.out.print(temp.data+" ");
+            arr.add(temp.data);
             q.remove();
             if(temp.right!=null) q.add(temp.right);
             if(temp.left!=null) q.add(temp.left);
+        }
+        Collections.reverse(arr);
+        for(int i:arr){
+            System.out.print(i+" ");
         }
     }
     
     public static void main(String[] args){
         BinaryTree bt = new BinaryTree();
-        bt.root = bt.createTree();
-        bt.reverselevelOrderTraversal(bt.root);
+        bt.createBinaryTree();
+        bt.reverselevelOrderTraversal();
     }
 }
